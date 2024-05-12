@@ -24,10 +24,10 @@ fetch("https://api.quotable.io/quotes/random")
     console.error("Error:", error);
   });
 
-fetch("http://numbersapi.com/random?json&callback=showNumber")
+fetch("https://candaan-api.vercel.app/api/text/random")
   .then((response) => response.json())
   .then((data) => {
-    document.getElementById("numfact").innerHTML = data.text + " (" + data.type + ")";
+    document.getElementById("jokes").innerHTML = data.data;
   })
   .catch((error) => {
     // Handle any errors here
