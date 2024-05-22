@@ -33,3 +33,13 @@ fetch("https://candaan-api.vercel.app/api/text/random")
     // Handle any errors here
     console.error("Error:", error);
   });
+
+  navigator.getBattery()
+    .then((battery) => {
+      const batteryPercentage = battery.level * 100;
+      document.getElementById("battery").innerText = batteryPercentage + "%";
+      // You can use the batteryPercentage value as needed
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
